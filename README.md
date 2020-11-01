@@ -1,6 +1,6 @@
 # Post Exploitation & Data Exfiltration
 
-### Élèves : Emma Durand **[@emmadrd912](https://github.com/emmadrd912)** et Pierre Ceberio **[@PierreYnov](https://github.com/PierreYnov)** .
+### Élèves : Emma Durand **[@emmadrd912](https://github.com/emmadrd912)** et Pierre Ceberio **[@PierreYnov](https://github.com/PierreYnov)** 
 
 ### Classe : B3 B
 

@@ -27,7 +27,4 @@ def sniffing():
             a += 1
 
 
-# cat save_shaddow | tr -d '\r' > save_shaddow3
-# mv save_shaddow3 save_shaddow
-
 sniffing()

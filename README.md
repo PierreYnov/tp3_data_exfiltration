@@ -8,19 +8,19 @@
 
 Nous sommes dans un cadre post-exploitation, nous devons exfiltrer le fichier `save_shaddow` de la machine victime et l'envoyer sur notre machine distante (afin de les casser).
 
-Pour ne pas se faire détecter du Firewall, nous devons détourner le protocole [ICMP](https://fr.wikipedia.org/wiki/Internet_Control_Message_Protocol) grâce à la librairie [Scapy](https://github.com/secdev/scapy), pour pouvoir forger nos propres paquets avec des bouts du fichier `save_shaddow` à l'intérieur de chaque.
+Pour ne pas nous faire détecter du Firewall, nous devons détourner le protocole [ICMP](https://fr.wikipedia.org/wiki/Internet_Control_Message_Protocol) grâce à la librairie [Scapy](https://github.com/secdev/scapy), pour pouvoir forger nos propres paquets avec des bouts du fichier `save_shaddow` à l'intérieur de chacun.
 
 ## Le projet
 
 - Le programme ``exfiltrator.py`` :
-    - envoie la trame de début à l'IP de la machine distante(``header``).
-    - découpe chaque ligne du fichier `save_shaddow`, et les envoie une par une, encodé en ``Base64``, avec un pattern pour qu'on soit sûr de leur intégrité.
-    - envoie la trame de fin (``end``).
+    - Envoie la trame de début à l'IP de la machine distante(``header``).
+    - Découpe chaque ligne du fichier `save_shaddow`, et les envoie une par une, encodé en ``Base64``, avec un pattern pour qu'on soit sûr de leur intégrité.
+    - Envoie la trame de fin (``end``).
 
 - Le programme ``server.py`` :
-    - capture uniquement les trames ICMP venant de l'IP du client (la machine victime).
-    - commence à reconstruire le fichier, uniquement à partir du moment où il recoit la trame de début.
-    - supprime le pattern d'intégrité, et décode la ``Base64`` afin de retrouver le texte original puis met le tout dans un fichier nommé `save_shaddow`
+    - Capture uniquement les trames ICMP venant de l'IP du client (la machine victime).
+    - Commence à reconstruire le fichier, uniquement à partir du moment où il reçoit la trame de début.
+    - Supprime le pattern d'intégrité, et décode la ``Base64`` afin de retrouver le texte original puis mets le tout dans un fichier nommé `save_shaddow`
 
 ## Comment lancer ?
 
@@ -42,7 +42,7 @@ Pour ne pas se faire détecter du Firewall, nous devons détourner le protocole 
 
 ## Autres
 
-Pour vérifier l'intégrité du fichier, on regarde si il y a une différence de hash MD5 (à faire sur les 2 machines), avec cette commande :
+Pour vérifier l'intégrité du fichier, on regarde s'il y a une différence de hash MD5 (à faire sur les 2 machines), avec cette commande :
 
 ``md5sum save_shaddow``
 

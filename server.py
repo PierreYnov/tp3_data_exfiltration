@@ -18,11 +18,11 @@ def sniffing():
                 a += 1
             else:
                 a += 1
-                text_file = open("save_shaddow", "a")
+                fichier_shaddow = open("save_shaddow", "a")
                 sans_hash = raw.replace("hash", "")
                 decode = base64.b64decode(sans_hash)
-                text_file.write(decode)
-                text_file.close()
+                fichier_shaddow.write(decode)
+                fichier_shaddow.close()
         else:
             a += 1
 

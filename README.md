@@ -21,6 +21,7 @@ Pour ne pas nous faire détecter du Firewall, nous devons détourner le protocol
     - Capture uniquement les trames ICMP venant de l'IP du client (la machine victime).
     - Commence à reconstruire le fichier, uniquement à partir du moment où il reçoit la trame de début.
     - Supprime le pattern d'intégrité, et décode la ``Base64`` afin de retrouver le texte original puis mets le tout dans un fichier nommé `save_shaddow`
+    - S'arrête quand il reçoit la trame de fin.
 
 ## Comment lancer ?
 

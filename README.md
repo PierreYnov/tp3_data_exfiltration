@@ -8,7 +8,7 @@
 
 Nous sommes dans un cadre post-exploitation, nous devons exfiltrer le fichier `save_shaddow` de la machine victime et l'envoyer sur notre machine distante (afin de les casser).
 
-Pour ne pas se faire détecter du Firewall, nous devons détourner le protocole ``ICMP`` grâce à la librairie ``scapy``, pour pouvoir forger nos propres paquets avec des bouts du fichier `save_shaddow` à l'intérieur de chaque.
+Pour ne pas se faire détecter du Firewall, nous devons détourner le protocole [ICMP](https://fr.wikipedia.org/wiki/Internet_Control_Message_Protocol) grâce à la librairie [Scapy](https://github.com/secdev/scapy), pour pouvoir forger nos propres paquets avec des bouts du fichier `save_shaddow` à l'intérieur de chaque.
 
 ## Le projet
 

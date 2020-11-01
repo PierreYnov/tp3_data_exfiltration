@@ -1,9 +1,11 @@
 from scapy import all as scapy
 import base64
 
-
 def sniffing():
-    capture = scapy.sniff(filter="icmp and icmp[0]=8 and host 192.168.43.165", prn=lambda x: x.show())
+    print("Enter IP Host:")
+    ip_host = input()
+    print("Écoute en cours ...")
+    capture = scapy.sniff(filter="icmp and icmp[0]=8 and host " + ip_host, prn=lambda x: x.show())
     a = 0
     b = False
     while capture[a]:

